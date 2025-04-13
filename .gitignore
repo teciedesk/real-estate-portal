@@ -1,28 +1,2 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-
-# Environment variables / secrets
+node_modules/
 .env
-
-# VS Code settings
-.vscode/
-
-# Pytest cache
-.pytest_cache/
-
-# Migrations (optional, if using Django and you want to ignore them at first)
-# **/migrations/
-
-# MyPy, coverage, and other dev tools
-.mypy_cache/
-.coverage
-htmlcov/
-
-# macOS / Windows hidden files
-.DS_Store
-Thumbs.db
