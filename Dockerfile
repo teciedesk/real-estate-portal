@@ -1,12 +1,20 @@
+# Use the official Node.js image as the base
 FROM node:18
 
+# Set the working directory inside the container
 WORKDIR /app
 
-COPY server ./server
-COPY client ./client
+# Copy the package.json and package-lock.json files from the server directory
+COPY server/package*.json ./
 
-RUN cd server && npm install
+# Install dependencies
+RUN npm install
 
+# Copy the rest of the server code
+COPY server/ ./
+
+# Expose the port the app runs on
 EXPOSE 3000
 
-CMD ["node", "server/server.js"]
+# Start the application
+CMD ["npm", "start"]
